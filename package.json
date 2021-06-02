@@ -1,12 +1,17 @@
 {
-  "name": "server",
+  "name": "study-fullstack",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "14.16.1",
+    "npm": "6.14.12"
+  },
   "scripts": {
+    "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "chanyu1",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
