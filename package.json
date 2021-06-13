@@ -5,14 +5,14 @@
   "main": "index.js",
   "engines": {
     "node": "14.16.1",
-    "npm": "6.14.12"
+    "npm": "7.17.0"
   },
   "scripts": {
     "start": "node server/index.js",
     "server": "nodemon server/index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
   },
   "author": "chanyu1",
   "license": "ISC",
@@ -24,5 +24,8 @@
     "nodemon": "^2.0.7",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-prettier": "^3.4.0"
   }
 }
