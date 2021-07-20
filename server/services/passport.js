@@ -7,13 +7,13 @@ const User = mongoose.model("users");
 
 // 직렬화: 프로그램의 오브젝트에 담긴 데이터를 외부 파일에 쓰거나 전송하는 것: write
 passport.serializeUser((user, done) => {
-  console.log("serializeUser");
+  // console.log("serializeUser");
   done(null, user.id);
 });
 
 // 역직렬화: 외부 파일의 데이터를 프로그램 내의 오브젝트로 읽어오는 것: read
 passport.deserializeUser((id, done) => {
-  console.log("deserializeUser");
+  // console.log("deserializeUser");
   User.findById(id).then((user) => {
     done(null, user);
   });
