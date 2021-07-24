@@ -1,4 +1,3 @@
-import { reverse } from "lodash";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchSurveys } from "../../_actions";
