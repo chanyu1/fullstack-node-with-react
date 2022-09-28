@@ -13,10 +13,10 @@ class SurveyForm extends Component {
       return (
         <Field
           key={name}
-          component={SurveyField}
           type="text"
           label={label}
           name={name}
+          component={SurveyField}
         />
       );
     });

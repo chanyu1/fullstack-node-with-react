@@ -17,15 +17,11 @@ module.exports = (app) => {
   );
 
   app.get("/api/logout", (req, res) => {
-    console.log("logout", req.user);
     req.logout();
     res.redirect("/");
   });
 
   app.get("/api/current_user", (req, res) => {
-    // console.log("current_user");
-    // console.log(req.session);
-    // res.send(req.session);
     res.send(req.user);
   });
 };
